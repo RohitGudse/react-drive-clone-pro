@@ -12,6 +12,7 @@ function App() {
         <Route path='/shared' element={<Shared />} />
         <Route path='/trash' element={<Trash />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/flight-search' element={<FlightSearch />} />
       </Routes>
     </BrowserRouter>
   )
