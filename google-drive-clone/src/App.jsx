@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Shared from './pages/Shared'
 import Trash from './pages/Trash'
+import SearchBar from "./components/SearchBar";
+import DarkModeToggle from "./components/DarkModeToggle";
 import Login from './pages/Login'
 
 function App() {
