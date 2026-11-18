@@ -1,19 +1,23 @@
 import React from "react";
 
-const StarredFiles = ({ files }) => {
-  const starred = files.filter(file => file.starred);
+function StarredFiles({ files = []}){
+  const starredFiles = files.filter(({ starred}) => starred === true);
 
-  return (
-    <div>
-      <h2>Starred Files</h2>
+  return(
+    <section className = "starred-files">
+        <h2> starred files </h2>
 
-      {starred.map((file, index) => (
-        <div key={index}>
-          ⭐ {file.name}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default StarredFiles;
+        {starredFiles.length > 0 ?(
+          <ul>
+            {starredFiles.map((file, index) => (
+              <li key={index}>
+                ⭐ {file.name}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No starred files.</p>
+        )}
+      </section>
+    )
+  }
